@@ -103,3 +103,53 @@ body {
         grid-template-columns: repeat(3, 1fr);
     }
 }
+
+/* ---------- TIMELINE DESIGN ---------- */
+.timeline {
+    position: relative;
+    margin-left: 20px;
+    padding-left: 20px;
+    border-left: 3px solid #4a6cff;
+}
+
+.timeline-item {
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.timeline-dot {
+    width: 14px;
+    height: 14px;
+    background: #4a6cff;
+    border-radius: 50%;
+    position: absolute;
+    left: -30px;
+    top: 5px;
+    border: 3px solid #fff;
+    outline: 3px solid #4a6cff;
+}
+
+.timeline-content {
+    padding: 10px 0 5px;
+}
+
+.timeline-content h3 {
+    margin-bottom: 5px;
+    font-size: 1.2rem;
+}
+
+.timeline-content .year {
+    color: #6c6c6c;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.timeline-content ul {
+    margin-left: 20px;
+}
+
+.project h5 {
+    margin-top: 10px;
+    color: #222;
+    font-weight: 600;
+}
