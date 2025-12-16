@@ -3,193 +3,383 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Akshay Annadate | Digital Resume</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Akshay Annadate - Digital CV</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
+        }
+        
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8;
+        }
+
+        /* Print Styles */
+        @media print {
+            .no-print {
+                display: none !important;
+            }
+            body {
+                background-color: white;
+                padding: 0;
+            }
+            .page-container {
+                box-shadow: none;
+                margin: 0;
+                width: 100%;
+                max-width: 100%;
+                border-radius: 0;
+            }
+        }
+    </style>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0f172a', /* Slate 900 */
+                        secondary: '#334155', /* Slate 700 */
+                        accent: '#3b82f6', /* Blue 500 */
+                    }
+                }
+            }
+        }
+    </script>
 </head>
-<body>
+<body class="bg-slate-100 text-slate-800 min-h-screen py-8 px-4 md:px-8 print:py-0 print:px-0">
 
-    <div class="container">
-
-        <!-- HEADER -->
-        <header class="header">
-            <div class="avatar"></div>
-            <h1>Akshay Annadate</h1>
-            <p class="role">Application Developer – Fujitsu Consulting India</p>
-            <p class="contact">📧 akshaynndt@gmail.com | 📱 +91 9665441064</p>
-        </header>
-
-        <!-- SUMMARY -->
-        <section class="card">
-            <h2>Summary</h2>
-            <p>
-                Working as an Application Developer in Fujitsu Consulting India, 
-                having 8+ years of professional experience in Software Development 
-                using Angular, Vue.js, JavaScript, Python, and AI technologies.
-            </p>
-        </section>
-
-        <!-- SKILLS -->
-        <section class="card skills">
-            <h2>Skills</h2>
-
-            <div class="skill-group">
-                <h3>Primary Skills</h3>
-                <ul>
-                    <li>JavaScript, TypeScript, HTML, CSS</li>
-                    <li>Angular, Vue.js, React.js</li>
-                    <li>Docker</li>
-                    <li>GenAI</li>
-                </ul>
-            </div>
-
-            <div class="skill-group">
-                <h3>Secondary Skills</h3>
-                <ul>
-                    <li>Python, Flask, FastAPI</li>
-                    <li>PostgreSQL</li>
-                </ul>
-            </div>
-
-            <div class="skill-group">
-                <h3>Profile Highlights</h3>
-                <ul>
-                    <li>Extensive experience in UI development with Angular, HTML, SCSS, JavaScript, NPM</li>
-                    <li>Strong understanding of responsive web design</li>
-                    <li>Backend experience with Python API development</li>
-                    <li>Experienced with GitHub workflows</li>
-                    <li>Hands-on experience with GenAI tools</li>
-                </ul>
-            </div>
-        </section>
-
-        <!-- EXPERIENCE -->
-        <section class="card">
-            <h2>Experience</h2>
-
-            <!-- FUJITSU -->
-            <div class="exp-item">
-                <h3>Application Developer – Fujitsu Consulting India</h3>
-                <p class="year">Apr 2022 – Present</p>
-
-                <ul>
-                    <li>Lead front-end & backend development as per client requirements.</li>
-                    <li>Guide junior team members and ensure task execution efficiency.</li>
-                </ul>
-
-                <h4>Projects</h4>
-
-                <div class="project">
-                    <h5>Praeva – AI-powered Observability & Automation Tool</h5>
-                    <ul>
-                        <li>Understand & enhance existing Flask + FastAPI application.</li>
-                        <li>Update UI layout and develop new UI components.</li>
-                        <li>Implement backend logic and DB updates.</li>
-                        <li>Develop AI chatbot UI and integrate APIs.</li>
-                    </ul>
-                </div>
-
-                <div class="project">
-                    <h5>IoT Cockpit – Sensor Management Dashboard</h5>
-                    <ul>
-                        <li>Work with Vue.js & FGNP UI library.</li>
-                        <li>Develop screens per specifications and integrate backend APIs.</li>
-                    </ul>
-                </div>
-
-                <div class="project">
-                    <h5>Point Cloud Data Object Detection</h5>
-                    <ul>
-                        <li>Modularize the Streamlit app into frontend & backend.</li>
-                        <li>Create APIs using FastAPI.</li>
-                        <li>Dockerize and deploy on Azure VM.</li>
-                        <li>Guide junior team members.</li>
-                    </ul>
-                </div>
-
-                <div class="project">
-                    <h5>EBPM&E – Health Risk Prediction App</h5>
-                    <ul>
-                        <li>Enhance UI components and fix existing bugs.</li>
-                    </ul>
-                </div>
-
-                <div class="project">
-                    <h5>Travelling Trajectory Demonstration Tool</h5>
-                    <ul>
-                        <li>Develop UI screens using Annotorius.js.</li>
-                        <li>Capture ROI coordinates & prepare JSON for backend.</li>
-                    </ul>
-                </div>
-
-                <div class="project">
-                    <h5>Kozuchi Component of Behavior Induction</h5>
-                    <ul>
-                        <li>Develop Angular UI from scratch.</li>
-                        <li>Integrate REST APIs and handle functional testing.</li>
-                        <li>Prepare installation and user documentation.</li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- CYBAGE -->
-            <div class="exp-item">
-                <h3>Sr. Software Engineer – Cybage Software Pvt Ltd</h3>
-                <p class="year">Apr 2019 – Apr 2022</p>
-
-                <ul>
-                    <li>Front-end development based on UX designs.</li>
-                    <li>Implement client-required functionalities.</li>
-                </ul>
-
-                <div class="project">
-                    <h5>Google Play Academy</h5>
-                    <ul>
-                        <li>Developed site per UX design.</li>
-                        <li>Integrated Academy APIs for dynamic content.</li>
-                    </ul>
-                </div>
-
-                <div class="project">
-                    <h5>REWS Arnulfpost</h5>
-                    <ul>
-                        <li>Developed marketing site for Google's Arnulfpost office.</li>
-                        <li>Deployed production version on Google Cloud.</li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- TECHKNOMATIC -->
-            <div class="exp-item">
-                <h3>Technology Analyst – Techknomatic Services Pvt Ltd</h3>
-                <p class="year">May 2016 – Apr 2019</p>
-
-                <ul>
-                    <li>Full stack developer (Angular, PHP, MySQL)</li>
-                    <li>Developed dashboards using D3.js</li>
-                    <li>Handled R&D on new tech stacks</li>
-                </ul>
-
-                <div class="project">
-                    <h5>Doxami</h5>
-                    <ul>
-                        <li>Extract Tableau workbook data using JS.</li>
-                        <li>Integrated PDF/report generation libraries.</li>
-                        <li>Implemented payment gateway.</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <!-- EDUCATION -->
-        <section class="card">
-            <h2>Education</h2>
-            <ul>
-                <li>Masters in Computer Application (MCA) – 65%</li>
-                <li>Bachelors in Computer Science (BCS) – 63%</li>
-            </ul>
-        </section>
-
+    <!-- Action Buttons (Floating) -->
+    <div class="fixed bottom-8 right-8 flex gap-3 no-print z-50">
+        <button onclick="window.print()" class="bg-primary text-white p-4 rounded-full shadow-lg hover:bg-slate-800 transition-all hover:scale-105" title="Print / Save as PDF">
+            <i class="fas fa-print text-xl"></i>
+        </button>
+        <button onclick="copyLink()" class="bg-white text-primary p-4 rounded-full shadow-lg hover:bg-slate-50 transition-all hover:scale-105" title="Copy Link">
+            <i class="fas fa-link text-xl"></i>
+        </button>
     </div>
 
+    <!-- CV Container -->
+    <div class="page-container max-w-5xl mx-auto bg-white shadow-2xl rounded-xl overflow-hidden flex flex-col md:flex-row print:shadow-none print:rounded-none">
+        
+        <!-- Left Sidebar (Dark) -->
+        <aside class="w-full md:w-1/3 bg-primary text-white p-8 flex flex-col gap-8">
+            
+            <!-- Profile Header -->
+            <div class="text-center md:text-left">
+                <div class="relative w-32 h-32 mx-auto md:mx-0 mb-6 rounded-full overflow-hidden border-4 border-slate-700 shadow-xl bg-slate-800 flex items-center justify-center">
+                    <!-- Placeholder for User Image - using Initials -->
+                    <!-- <span class="text-4xl font-bold text-slate-400">AA</span> -->
+                    <img src="./1683622219567.jpg" class="w-full h-full object-cover">
+                </div>
+                <h1 class="text-3xl font-bold tracking-tight">Akshay Annadate</h1>
+                <p class="text-blue-400 font-medium mt-2 text-lg">Application Developer</p>
+                <!-- <p class="text-slate-400 text-sm mt-4 leading-relaxed">
+                    Building scalable web applications with a focus on user experience and clean architecture.
+                </p> -->
+            </div>
+
+            <hr class="border-slate-700">
+
+            <!-- Contact Info -->
+            <div class="space-y-4">
+                <h3 class="uppercase tracking-widest text-xs font-bold text-slate-400 mb-4">Contact</h3>
+                
+                <a href="mailto:alex.morgan@example.com" class="flex items-center gap-3 text-slate-300 hover:text-white transition-colors group">
+                    <div class="w-8 h-8 rounded bg-slate-800 flex items-center justify-center group-hover:bg-blue-600 transition-colors">
+                        <i class="fas fa-envelope text-sm"></i>
+                    </div>
+                    <span class="text-sm">akshaynndt@gmail.com</span>
+                </a>
+
+                <a href="tel:+1234567890" class="flex items-center gap-3 text-slate-300 hover:text-white transition-colors group">
+                    <div class="w-8 h-8 rounded bg-slate-800 flex items-center justify-center group-hover:bg-blue-600 transition-colors">
+                        <i class="fas fa-phone text-sm"></i>
+                    </div>
+                    <span class="text-sm">+919665441064</span>
+                </a>
+
+                <a href="#" class="flex items-center gap-3 text-slate-300 hover:text-white transition-colors group">
+                    <div class="w-8 h-8 rounded bg-slate-800 flex items-center justify-center group-hover:bg-blue-600 transition-colors">
+                        <i class="fas fa-map-marker-alt text-sm"></i>
+                    </div>
+                    <span class="text-sm">Pune, India</span>
+                </a>
+
+                <a href="https://linkedin.com" target="_blank" class="flex items-center gap-3 text-slate-300 hover:text-white transition-colors group">
+                    <div class="w-8 h-8 rounded bg-slate-800 flex items-center justify-center group-hover:bg-blue-600 transition-colors">
+                        <i class="fab fa-linkedin-in text-sm"></i>
+                    </div>
+                    <span class="text-sm">https://in.linkedin.com/in/akshay-annadate</span>
+                </a>
+            </div>
+
+            <hr class="border-slate-700">
+
+            <!-- Skills -->
+            <div>
+                <h3 class="uppercase tracking-widest text-xs font-bold text-slate-400 mb-4">Core Skills</h3>
+                <div class="flex flex-wrap gap-2">
+                    <span class="px-3 py-1 bg-slate-800 rounded text-xs text-slate-200 border border-slate-700">JavaScript (ES6+)</span>
+                    <span class="px-3 py-1 bg-slate-800 rounded text-xs text-slate-200 border border-slate-700">TypeScript</span>
+                    <span class="px-3 py-1 bg-slate-800 rounded text-xs text-slate-200 border border-slate-700">React.js</span>
+                    <span class="px-3 py-1 bg-slate-800 rounded text-xs text-slate-200 border border-slate-700">Angular</span>
+                    <span class="px-3 py-1 bg-slate-800 rounded text-xs text-slate-200 border border-slate-700">Vue.js</span>
+                    <span class="px-3 py-1 bg-slate-800 rounded text-xs text-slate-200 border border-slate-700">Bootstrap</span>
+                    <span class="px-3 py-1 bg-slate-800 rounded text-xs text-slate-200 border border-slate-700">Flask</span>
+                    <span class="px-3 py-1 bg-slate-800 rounded text-xs text-slate-200 border border-slate-700">Python</span>
+                    <span class="px-3 py-1 bg-slate-800 rounded text-xs text-slate-200 border border-slate-700">Docker</span>
+                    <span class="px-3 py-1 bg-slate-800 rounded text-xs text-slate-200 border border-slate-700">Git</span>
+                </div>
+            </div>
+
+            <!-- Education -->
+            <div>
+                <h3 class="uppercase tracking-widest text-xs font-bold text-slate-400 mb-4">Education</h3>
+                <div class="mb-4">
+                    <h4 class="text-white font-semibold">Masters in Computer Application (MCA) – 65%</h4>
+                    <p class="text-blue-400 text-sm">University of Pune</p>
+                    <p class="text-slate-400 text-xs mt-1">2013 - 2016</p>
+                </div>
+                <div class="mb-4">
+                    <h4 class="text-white font-semibold">Bachelors in Computer Science (BCS) – 63%</h4>
+                    <p class="text-blue-400 text-sm">University of Nanded</p>
+                    <p class="text-slate-400 text-xs mt-1">2010 - 2013</p>
+                </div>
+            </div>
+
+             <!-- Languages -->
+             <div>
+                <h3 class="uppercase tracking-widest text-xs font-bold text-slate-400 mb-4">Languages</h3>
+                <ul class="text-sm text-slate-300 space-y-1">
+                    <li class="flex justify-between"><span>English</span> <span class="text-slate-500">Professional</span></li>
+                    <li class="flex justify-between"><span>Hindi</span> <span class="text-slate-500">Professional</span></li>
+                    <li class="flex justify-between"><span>Marathi</span> <span class="text-slate-500">Native</span></li>
+                </ul>
+            </div>
+
+        </aside>
+
+        <!-- Right Content (Light) -->
+        <main class="w-full md:w-2/3 p-8 md:p-12">
+            
+            <!-- Summary Section -->
+            <section class="mb-10">
+                <div class="flex items-center gap-3 mb-4">
+                    <div class="w-8 h-8 rounded bg-blue-100 text-blue-600 flex items-center justify-center">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <h2 class="text-xl font-bold text-primary">Professional Summary</h2>
+                </div>
+                <p class="text-slate-600 leading-relaxed">
+                    Working as an Application Developer in Fujitsu Consulting India, having 8+ years of professional experience in Software Development using Angular, Vue.js, JavaScript, Python, and AI technologies.
+                </p>
+            </section>
+
+            <!-- Experience Section -->
+            <section class="mb-10">
+                <div class="flex items-center gap-3 mb-6">
+                    <div class="w-8 h-8 rounded bg-blue-100 text-blue-600 flex items-center justify-center">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <h2 class="text-xl font-bold text-primary">Work Experience</h2>
+                </div>
+
+                <!-- Job 1 -->
+                <div class="relative pl-8 pb-8 border-l-2 border-slate-200 last:pb-0">
+                    <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-blue-600 border-4 border-white"></div>
+                    <div class="mb-2">
+                        <h3 class="text-lg font-bold text-slate-800">Application Developer</h3>
+                        <div class="flex flex-wrap gap-2 text-sm mt-1">
+                            <span class="text-blue-600 font-semibold">Fujitsu Consulting India Pvt Ltd</span>
+                            <span class="text-slate-400">•</span>
+                            <span class="text-slate-500">Apr 2022 - Present</span>
+                        </div>
+                    </div>
+                    <!-- <p class="text-slate-600 text-sm mb-3">
+                        Lead front-end & backend development as per client requirements.
+                    </p> -->
+                    <ul class="list-disc list-inside text-sm text-slate-600 space-y-1 ml-1">
+                        <li>Lead front-end development on AI and IoT-based applications for Fujitsu Japan.</li>
+                        <li>Worked on AI based product.</li>
+                        <li>Developed complex UI modules using Angular and Vue.js.</li>
+                        <li>Mentored junior developers and conducted code reviews.</li>
+                    </ul>
+                </div>
+
+                <!-- Job 2 -->
+                <div class="relative pl-8 pb-8 border-l-2 border-slate-200 last:pb-0">
+                    <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-slate-300 border-4 border-white"></div>
+                    <div class="mb-2">
+                        <h3 class="text-lg font-bold text-slate-800">Sr. Software Engineer</h3>
+                        <div class="flex flex-wrap gap-2 text-sm mt-1">
+                            <span class="text-blue-600 font-semibold">Cybage Software Pvt Ltd</span>
+                            <span class="text-slate-400">•</span>
+                            <span class="text-slate-500">Apr 2019 - Apr 2022</span>
+                        </div>
+                    </div>
+                    <ul class="list-disc list-inside text-sm text-slate-600 space-y-1 ml-1">
+                        <li>Developed scalable Angular-based enterprise applications.</li>
+                        <li>Collaborated with cross-functional teams for backend integration.</li>
+                        <li>Delivered projects adhering to strict quality and timeline metrics.</li>
+                    </ul>
+                </div>
+
+                <div class="relative pl-8 pb-8 border-l-2 border-slate-200 last:pb-0">
+                    <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-slate-300 border-4 border-white"></div>
+                    <div class="mb-2">
+                        <h3 class="text-lg font-bold text-slate-800">Technology Analyst</h3>
+                        <div class="flex flex-wrap gap-2 text-sm mt-1">
+                            <span class="text-blue-600 font-semibold">Techknomatic Services Pvt Ltd</span>
+                            <span class="text-slate-400">•</span>
+                            <span class="text-slate-500">May 2016 - Apr 2019</span>
+                        </div>
+                    </div>
+                    <ul class="list-disc list-inside text-sm text-slate-600 space-y-1 ml-1">
+                        <li>Worked on dashboards, data visualizations, and client-specific reporting tools.</li>
+                        <li>Contributed to the entire SDLC using Agile practices.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Projects Section -->
+            <section>
+                <div class="flex items-center gap-3 mb-6">
+                    <div class="w-8 h-8 rounded bg-blue-100 text-blue-600 flex items-center justify-center">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h2 class="text-xl font-bold text-primary">Key Projects</h2>
+                </div>
+
+                <div class="grid grid-cols-1 gap-4">
+                    <!-- Project 1 -->
+                    <div class="border border-slate-200 rounded-lg p-5 hover:border-blue-300 hover:shadow-md transition-all group">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="font-bold text-slate-800 group-hover:text-blue-600 transition-colors">Observability Tool</h3>
+                        </div>
+                        <p class="text-xs text-slate-500 mb-3">AI-powered Observability & Automation Tool</p>
+                        
+                        <ul class="list-disc text-xs text-slate-600 space-y-1 ml-4 mb-3">
+                            <li>Understand &amp; enhance existing Flask + FastAPI application.</li>
+                            <li>Update UI layout and develop new UI components.</li>
+                            <li>Implement backend logic and DB updates.</li>
+                            <li>Develop AI chatbot UI and integrate APIs.</li>
+                        </ul>
+                        <div class="flex flex-wrap gap-1">
+                            <span class="px-2 py-0.5 bg-slate-100 text-slate-600 text-[10px] rounded font-medium">Python</span>
+                            <span class="px-2 py-0.5 bg-slate-100 text-slate-600 text-[10px] rounded font-medium">Flask</span>
+                            <span class="px-2 py-0.5 bg-slate-100 text-slate-600 text-[10px] rounded font-medium">JavaScript</span>
+                            <span class="px-2 py-0.5 bg-slate-100 text-slate-600 text-[10px] rounded font-medium">FastAPI</span>
+                            <span class="px-2 py-0.5 bg-slate-100 text-slate-600 text-[10px] rounded font-medium">AzureOpenAI</span>
+                            <span class="px-2 py-0.5 bg-slate-100 text-slate-600 text-[10px] rounded font-medium">Postgresql</span>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="border border-slate-200 rounded-lg p-5 hover:border-blue-300 hover:shadow-md transition-all group">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="font-bold text-slate-800 group-hover:text-blue-600 transition-colors">IoT Cockpit</h3>
+                        </div>
+                        <p class="text-xs text-slate-500 mb-3">The web application to manage the sensor details installed on various floors of the organization.</p>
+                        <ul class="list-disc text-xs text-slate-600 space-y-1 ml-4 mb-3">
+                            <li>Understand the existing application and source code which is built in Vue.js.</li>
+                            <li>Understand the FGNP library for UI components.</li>
+                            <li>Develop the screen as per the requirement specification.</li>
+                            <li>Collaborate with other team members for backend and database integration with frontend code.</li>
+                        </ul>
+                        <div class="flex flex-wrap gap-1">
+                            <span class="px-2 py-0.5 bg-slate-100 text-slate-600 text-[10px] rounded font-medium">Vue.js</span>
+                            <span class="px-2 py-0.5 bg-slate-100 text-slate-600 text-[10px] rounded font-medium">Node.js</span>
+                            <span class="px-2 py-0.5 bg-slate-100 text-slate-600 text-[10px] rounded font-medium">Postgresql</span>
+                        </div>
+                    </div>
+
+                    <!-- Project 3 -->
+                    <div class="border border-slate-200 rounded-lg p-5 hover:border-blue-300 hover:shadow-md transition-all group">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="font-bold text-slate-800 group-hover:text-blue-600 transition-colors">Policy Twin</h3>
+                        </div>
+                        <p class="text-xs text-slate-500 mb-3">The web application to predict health risks and effects, and coordinate services for each stakeholder based on evidence.</p>
+                        <ul class="list-disc text-xs text-slate-600 space-y-1 ml-4 mb-3">
+                            <li>Understand the existing application and source code.</li>
+                            <li>Enhancement in front-end UI components.</li>
+                            <li>Existing front-end bug fixes.</li>
+                            <li>Testing of enhanced or modified UI components.</li>
+                        </ul>
+                        <div class="flex flex-wrap gap-1">
+                            <span class="px-2 py-0.5 bg-slate-100 text-slate-600 text-[10px] rounded font-medium">Vue.js</span>
+                            <span class="px-2 py-0.5 bg-slate-100 text-slate-600 text-[10px] rounded font-medium">FastAPI</span>
+                            <span class="px-2 py-0.5 bg-slate-100 text-slate-600 text-[10px] rounded font-medium">Postgresql</span>
+                        </div>
+                    </div>
+
+                    <!-- Project 4 -->
+                    <div class="border border-slate-200 rounded-lg p-5 hover:border-blue-300 hover:shadow-md transition-all group">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="font-bold text-slate-800 group-hover:text-blue-600 transition-colors">Kozuchi Component of Behavior Induction</h3>
+                        </div>
+                        <p class="text-xs text-slate-500 mb-3">The application to generate real time avatar movies using Generative AI and TTS. Further, set up real time docker images and push these to the container registry for use in behavior induction analysis.</p>
+                        <ul class="list-disc text-xs text-slate-600 space-y-1 ml-4 mb-3">
+                            <li>Development of the UI screens from scratch with Angular framework.</li>
+                            <li>Integrate the REST APIs with front-end applications.</li>
+                            <li>Functional testing of the entire application.</li>
+                            <li>Prepare the installation and user manual documentation.</li>
+                        </ul>
+                        <div class="flex flex-wrap gap-1">
+                            <span class="px-2 py-0.5 bg-slate-100 text-slate-600 text-[10px] rounded font-medium">Angular</span>
+                            <span class="px-2 py-0.5 bg-slate-100 text-slate-600 text-[10px] rounded font-medium">FastAPI</span>
+                            <span class="px-2 py-0.5 bg-slate-100 text-slate-600 text-[10px] rounded font-medium">SQLite</span>
+                            <span class="px-2 py-0.5 bg-slate-100 text-slate-600 text-[10px] rounded font-medium">HTML5</span>
+                            <span class="px-2 py-0.5 bg-slate-100 text-slate-600 text-[10px] rounded font-medium">CSS3</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <!-- Notification Toast (Hidden by default) -->
+    <div id="toast" class="fixed top-5 left-1/2 transform -translate-x-1/2 bg-slate-800 text-white px-6 py-3 rounded shadow-lg transition-opacity opacity-0 pointer-events-none z-50">
+        Link copied to clipboard!
+    </div>
+
+    <script>
+        function copyLink() {
+            const url = window.location.href;
+            const tempInput = document.createElement("input");
+            document.body.appendChild(tempInput);
+            tempInput.value = url;
+            tempInput.select();
+            document.execCommand("copy");
+            document.body.removeChild(tempInput);
+
+            // Show Toast
+            const toast = document.getElementById('toast');
+            toast.classList.remove('opacity-0');
+            setTimeout(() => {
+                toast.classList.add('opacity-0');
+            }, 2000);
+        }
+    </script>
 </body>
 </html>
